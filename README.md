@@ -1,4 +1,4 @@
-##Finalizando a calculadoroa de combustivel 
+##Finalizando a calculadora de combustivel 
 
 
 <img src= "https://github.com/ThiagoFeliix/Calculadoradecombustivel/assets/151776228/ac49a890-f173-4d36-a27c-603539d76fc8" width=200/> 
