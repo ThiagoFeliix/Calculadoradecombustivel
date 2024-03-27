@@ -1,14 +1,10 @@
 package com.example.calculadoradecombustivel
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
 import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-
 
 
 class MainActivity2 : AppCompatActivity() {
@@ -17,23 +13,32 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
 
+        val edtComb = findViewById<TextInputEditText>(R.id.preço)
+        val edtDist = findViewById<TextInputEditText>(R.id.distancia)
+        val button = findViewById<Button>(R.id.button2)
+        button.setOnClickListener {
+
+            val combStr: String = edtComb.text.toString()
+            val distStr: String = edtDist.text.toString()
+
+            if (combStr == "" || distStr == "") {
+
+            }else {
+            val comb =  combStr.toFloat()
+            val dist = distStr.toFloat()
+
+            val preco =  comb * dist
+            val resultado = preco
+
+            val intent = Intent(this, MainActivity3::class.java )
+                intent.putExtra(KEY_RESULT, resultado)
+            startActivity(intent)
+             println("Thiago$resultado")
 
 
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
     }
 }
